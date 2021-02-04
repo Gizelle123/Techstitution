@@ -313,8 +313,7 @@ button {
 											<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 										</ul>
 									</section>
-
-								<!-- Copyright -->
+                                    <!-- Copyright -->
 									<div class="copyright">
 										<ul class="menu">
 											<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
@@ -335,6 +334,24 @@ button {
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script id="rendered-js" >
+const buttons = document.querySelectorAll('.project');
+const overlay = document.querySelector('.overlay');
+const overlayImage = document.querySelector('.overlay__inner img');
+
+function open(e) {
+  overlay.classList.add('open');
+  const src = e.currentTarget.querySelector('img').src;
+  overlayImage.src = src;
+}
+
+function close() {
+  overlay.classList.remove('open');
+}
+
+buttons.forEach(button => button.addEventListener('click', open));
+overlay.addEventListener('click', close);
+</script>
 
 	</body>
 </html>
