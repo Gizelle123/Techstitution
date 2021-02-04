@@ -15,152 +15,12 @@
 
 
 
-
-<!--
-
-        Here begins the gallery code.
-
-        Based on: https://codepen.io/juliepark/pen/qKQzJL
-        License: MIT
-
--->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nanogallery2@3.0.5/dist/css/nanogallery2.min.css" integrity="sha256-DvwdlBQdkd45HC4t0kykLAo2hrny4Mg+Ga9Kd341TxE=" crossorigin="anonymous">
 
 <style>
-
-button {
-  cursor: pointer;
+html, body {
+ scroll-behavior: smooth;
 }
-
-#portfolio {
-  font-family: monospace;
-  margin: 0;
-  width: 100%;
-  min-height: 50vh;
-  background: #ffffff;
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(200px, 1fr));
-  grid-template-rows: 1fr 1fr;
-  grid-gap: 2px;
-}
-
-#portfolio .project {
-  position: relative;
-  background: #F2DAD7;
-  overflow: hidden;
-}
-#portfolio .project img {
-  position: absolute;
-  opacity: 0.9;
-}
-#portfolio .project p {
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  padding: 1em 0;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  z-index: 3;
-}
-#portfolio .project .grid__title {
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  white-space: nowrap;
-  bottom: 0;
-  font-weight: 100;
-  font-size: 0.8em;
-  z-index: 3;
-  text-transform: uppercase;
-  color: #474545;
-  letter-spacing: 2px;
-}
-
-#portfolio .project:hover .grid__overlay {
-  transform: translateY(0%);
-}
-
-#portfolio .grid__overlay {
-  background: rgba(229, 182, 177, 0.9);
-  height: 100%;
-  grid-column: 1/-1;
-  grid-row: 1/-1;
-  position: relative;
-  display: grid;
-  justify-items: center;
-  align-items: center;
-  transform: translateY(101%);
-  transition: all 0.3s ease-in-out;
-}
-
-#portfolio .grid__overlay button {
-  background: none;
-  outline: none;
-  font-weight: 100;
-  letter-spacing: 2px;
-  border: 1px solid #ffffff;
-  color: #ffffff;
-  text-transform: uppercase;
-  padding: 10px;
-}
-
-#portfolio .grid__overlay button:hover {
-  transition: all 0.3s ease-in-out;
-  background: #ffffff;
-  color: #D1A39E;
-  transform: scale(1.05);
-}
-
-#portfolio .overlay {
-  position: fixed;
-  background: rgba(71, 69, 69, 0.7);
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: none;
-  z-index: 3;
-}
-
-#portfolio .overlay.open {
-  display: grid;
-  align-items: center;
-  justify-items: center;
-}
-
-#portfolio .overlay__inner {
-  background: #ffffff;
-  width: 700px;
-  padding: 20px;
-  position: relative;
-  opacity: 1;
-}
-
-#portfolio .close {
-  position: absolute;
-  top: 3px;
-  right: 10px;
-  background: none;
-  outline: 0;
-  color: #474545;
-  border: 0;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-#portfolio .close:hover {
-  color: #D1A39E;
-}
-
-#portfolio .project__image {
-  margin-left: -50%;
-}
-</style>
-
-
-
-
-<style>
 .gallery {
   display: none;
 }
@@ -168,8 +28,6 @@ button {
   display: block;
 }
 </style>
-
-
 
 
 
@@ -239,9 +97,9 @@ button {
 					<div class="reel">
 
 						<article>
-							<a href="#gallery-Buildings and Nature" class="image featured"><img src="images/kvk.jpeg" alt="" /></a>
+							<a href="#gallery-buildings" class="image featured"><img src="images/kvk.jpeg" alt="" /></a>
 							<header>
-								<h3><a href="#gallery-Buildings and Nature">Students' Dorms</a></h3>
+								<h3><a href="#gallery-buildings">Buildings and Nature</a></h3>
 							</header>
 							<p>Prishtina</p>
 						</article>
@@ -267,7 +125,7 @@ button {
 							<header>
 								<h3><a href="#">Chicago Park</a></h3>
 							</header>
-							<p> </p>
+							<p></p>
 						</article>
 
 						<article>
@@ -323,247 +181,13 @@ button {
 
 
 
-
-							<!-- Carousel -->
-<section class="carousel">
-<div class="reel">
-
-<article>
-   <a href="#gallery-Buildings and Nature" class="image featured"><img src="images/1.jpg" alt="" /></a>
-<header>
-<h3><a href="#gallery-Buildings and Nature">PIttsburgh,PA</a></h3>
-</header>
-    <p>Picture taken from Mount Washington, Pittsburgh,Pennsylvania</p>
-</article>
-
-<article>
-   <a href="#gallery-Buildings and Nature" class="image featured"><img src="images/6.jpeg" alt="" /></a>
-<header>
-<h3><a href="#gallery-Buildings and Nature">Chatham Bars Inn</a></h3>
-</header>
-    <p>CHatham, Cape Cod, MA</p>
-</article>
-
-<article>
-   <a href="#gallery-Buildings and Nature" class="image featured"><img src="images/sunrise.jpg" alt="" /></a>
-<header>
-<h3><a href="#gallery-Buildings and Nature">Sunrise in Gjilan</a></h3>
-</header>
-    <p>Monday morning shoot</p>
-</article>
-
-<article>
-   <a href="#gallery-Buildings and Nature" class="image featured"><img src="images/20.jpeg" alt="" /></a>
-<header>
-<h3><a href="#gallery-Buildings and Nature">New York City</a></h3>
-</header>
-    <p>Mannhattan bridge</p>
-</article>
-
-
-
-
-
 <div class="wrapper style2">
 <article id="main" class="container special">
-
-
-
-<div class="gallery" id="gallery-pittsburgh">
-  <section id="portfolio">
-        <div class="project">
-      <img class="project__image" src="https://images.unsplash.com/photo-1519211975560-4ca611f5a72a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6ae34625b8db390fb2b784800d76d225&auto=format&fit=crop&w=700&q=80" />
-      <p>Pittsburgh 1</p>
-      <h3 class="grid__title"> front-end</h3>
-      <div class="grid__overlay">
-        <button class="viewbutton">view more</button>
-      </div>
-    </div>
-    
-    <div class="project">
-      <img class="project__image" src="https://images.unsplash.com/photo-1521104955835-ba91c70d6443?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=38cdeda7d073c4b6d47a5776f184cba9&auto=format&fit=crop&w=700&q=80" />
-      <p>pure css</p>
-      <h3 class="grid__title"> front-end</h3>
-      <div class="grid__overlay">
-        <button class="viewbutton">view more</button>
-      </div>
-    </div>
-    
-    <div class="project">
-      <img class="project__image" src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e5a31d03ddee66863a599421f792e07b&auto=format&fit=crop&w=700&q=80" />
-      <p>web apps</p>
-      <h3 class="grid__title"> full-stack</h3>
-      <div class="grid__overlay">
-        <button class="viewbutton">view more</button>
-      </div>
-    </div>
-    
-    <div class="project">
-      <img class="project__image" src="https://images.unsplash.com/photo-1472437774355-71ab6752b434?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=dd4d735954f33290fbf984e4eb7abe32&auto=format&fit=crop&w=700&q=80" />
-      <p>daily ui</p>
-      <h3 class="grid__title"> ui/ux design</h3>
-      <div class="grid__overlay">
-        <button class="viewbutton">view more</button>
-      </div>
-    </div>
-    <div class="project">
-      <img class="project__image" src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7c5008952226f48ed4bf5d3ea64ff545&auto=format&fit=crop&w=700&q=80" />
-      <p>websites</p>
-      <h3 class="grid__title"> front-end</h3>
-      <div class="grid__overlay">
-        <button class="viewbutton">view more</button>
-      </div>
-    </div>
-    
-    <div class="project">
-      <img class="project__image" src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?ixlib=rb-0.3.5&s=a4b3dc4bee43da458f6aa5c05be6bfc4&auto=format&fit=crop&w=700&q=80" />
-      <p>pure css</p>
-      <h3 class="grid__title"> front-end</h3>
-      <div class="grid__overlay">
-        <button class="viewbutton">view more</button>
-      </div>
-    </div>
-    
-    <div class="project">
-      <img class="project__image" src="https://images.unsplash.com/photo-1481762554390-ff5562748bdf?ixlib=rb-0.3.5&s=1b7f850b7f8f702e237b0f81c0ec0bf5&auto=format&fit=crop&w=700&q=80" />
-      <p>web apps</p>
-      <h3 class="grid__title"> full-stack</h3>
-      <div class="grid__overlay">
-        <button class="viewbutton">view more</button>
-      </div>
-    </div>
-    
-    <div class="project">
-      <img class="project__image" src="https://images.unsplash.com/photo-1463620695885-8a91d87c53d0?ixlib=rb-0.3.5&s=e5bf2f64858b8abe2a386b0c6df594e4&auto=format&fit=crop&w=700&q=80" />
-      <p>daily ui</p>
-      <h3 class="grid__title"> ui/ux design</h3>
-      <div class="grid__overlay">
-        <button class="viewbutton">view more</button>
-      </div>
-    </div>
-    <div class="overlay">
-      <div class="overlay__inner">
-        <button class="close">close X</button>
-        <img>
-      </div>
-    </div>
-  </section>
+<div class="gallery" id="gallery-buildings"></div>
+<div class="gallery" id="gallery-niagara"></div>
+</article>
 </div>
 
-
-<div class="gallery" id="gallery-niagara">
-  <section id="portfolio">
-        <div class="project">
-      <img class="project__image" src="https://images.unsplash.com/photo-1519211975560-4ca611f5a72a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6ae34625b8db390fb2b784800d76d225&auto=format&fit=crop&w=700&q=80" />
-      <p>Niagara 1</p>
-      <h3 class="grid__title"> front-end</h3>
-      <div class="grid__overlay">
-        <button class="viewbutton">view more</button>
-      </div>
-    </div>
-    
-    <div class="project">
-      <img class="project__image" src="https://images.unsplash.com/photo-1521104955835-ba91c70d6443?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=38cdeda7d073c4b6d47a5776f184cba9&auto=format&fit=crop&w=700&q=80" />
-      <p>pure css</p>
-      <h3 class="grid__title"> front-end</h3>
-      <div class="grid__overlay">
-        <button class="viewbutton">view more</button>
-      </div>
-    </div>
-    
-    <div class="project">
-      <img class="project__image" src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e5a31d03ddee66863a599421f792e07b&auto=format&fit=crop&w=700&q=80" />
-      <p>web apps</p>
-      <h3 class="grid__title"> full-stack</h3>
-      <div class="grid__overlay">
-        <button class="viewbutton">view more</button>
-      </div>
-    </div>
-    
-    <div class="project">
-      <img class="project__image" src="https://images.unsplash.com/photo-1472437774355-71ab6752b434?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=dd4d735954f33290fbf984e4eb7abe32&auto=format&fit=crop&w=700&q=80" />
-      <p>daily ui</p>
-      <h3 class="grid__title"> ui/ux design</h3>
-      <div class="grid__overlay">
-        <button class="viewbutton">view more</button>
-      </div>
-    </div>
-    <div class="project">
-      <img class="project__image" src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7c5008952226f48ed4bf5d3ea64ff545&auto=format&fit=crop&w=700&q=80" />
-      <p>websites</p>
-      <h3 class="grid__title"> front-end</h3>
-      <div class="grid__overlay">
-        <button class="viewbutton">view more</button>
-      </div>
-    </div>
-    
-    <div class="project">
-      <img class="project__image" src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?ixlib=rb-0.3.5&s=a4b3dc4bee43da458f6aa5c05be6bfc4&auto=format&fit=crop&w=700&q=80" />
-      <p>pure css</p>
-      <h3 class="grid__title"> front-end</h3>
-      <div class="grid__overlay">
-        <button class="viewbutton">view more</button>
-      </div>
-    </div>
-    
-    <div class="project">
-      <img class="project__image" src="https://images.unsplash.com/photo-1481762554390-ff5562748bdf?ixlib=rb-0.3.5&s=1b7f850b7f8f702e237b0f81c0ec0bf5&auto=format&fit=crop&w=700&q=80" />
-      <p>web apps</p>
-      <h3 class="grid__title"> full-stack</h3>
-      <div class="grid__overlay">
-        <button class="viewbutton">view more</button>
-      </div>
-    </div>
-    
-    <div class="project">
-      <img class="project__image" src="https://images.unsplash.com/photo-1463620695885-8a91d87c53d0?ixlib=rb-0.3.5&s=e5bf2f64858b8abe2a386b0c6df594e4&auto=format&fit=crop&w=700&q=80" />
-      <p>daily ui</p>
-      <h3 class="grid__title"> ui/ux design</h3>
-      <div class="grid__overlay">
-        <button class="viewbutton">view more</button>
-      </div>
-    </div>
-    <div class="overlay">
-      <div class="overlay__inner">
-        <button class="close">close X</button>
-        <img>
-      </div>
-    </div>
-  </section>
-</div>
-
-<div class="gallery" id="gallery-Dogs">
-  <section id="portfolio">
-        <div class="project">
-      <img class="project__image" src="images/molly.jpeg" />
-      <p>Niagara 1</p>
-      <h3 class="grid__title"> front-end</h3>
-      <div class="grid__overlay">
-        <button class="viewbutton">view more</button>
-      </div>
-    </div>
-    
-    <div class="project">
-      <img class="project__image" src="images/blk.jpeg" />
-      <p>pure css</p>
-      <h3 class="grid__title"> front-end</h3>
-      <div class="grid__overlay">
-        <button class="viewbutton">view more</button>
-      </div>
-    </div>
-    
-    <div class="project">
-      <img class="project__image" src="molli.jpeg" />
-      <p>web apps</p>
-      <h3 class="grid__title"> full-stack</h3>
-      <div class="grid__overlay">
-        <button class="viewbutton">view more</button>
-      </div>
-    </div>
-
-
-  </article>
-</div>
 
 
 			<!-- Footer -->
@@ -605,32 +229,29 @@ button {
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
-			<!--
 
-        Here begins the gallery code.
-
-        Based on: https://codepen.io/juliepark/pen/qKQzJL
-        License: MIT
-
---> 
-			<script id="rendered-js" >
-const buttons = document.querySelectorAll('.project');
-const overlay = document.querySelector('.overlay');
-const overlayImage = document.querySelector('.overlay__inner img');
-
-function open(e) {
-  overlay.classList.add('open');
-  const src = e.currentTarget.querySelector('img').src;
-  overlayImage.src = src;
-}
-
-function close() {
-  overlay.classList.remove('open');
-}
-
-buttons.forEach(button => button.addEventListener('click', open));
-overlay.addEventListener('click', close);
+<script src="https://cdn.jsdelivr.net/npm/nanogallery2@3.0.5/dist/jquery.nanogallery2.min.js" integrity="sha256-91VGpTg6V015EQ87D2XhztNiCU3UMYrFNCKJW6gfJ34=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+$("#gallery-buildings").nanogallery2({
+  thumbnailHeight:  150,
+  thumbnailWidth:   150,
+  items: [
+      { src: 'images/1.jpg', title: 'Title Image 1' },
+      { src: 'images/2.jpg', title: 'Title Image 2' },
+      { src: 'images/3.jpg', title: 'Title Image 3' }
+  ]
+});
+$("#gallery-niagara").nanogallery2({
+  thumbnailHeight:  150,
+  thumbnailWidth:   150,
+  items: [
+      { src: 'images/4.jpg', title: 'Title Image 1' },
+      { src: 'images/5.jpeg', title: 'Title Image 2' },
+      { src: 'images/6.jpeg', title: 'Title Image 3' }
+  ]
+});
 </script>
+
 
 	</body>
 </html>
