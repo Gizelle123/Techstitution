@@ -97,83 +97,35 @@ html, body {
 					<div class="reel">
 
 						<article>
+							<a href="#gallery-nature" class="image featured"><img src="images/2.jpg" alt="" /></a>
+							<header>
+								<h3><a href="#gallery-nature">Nature</a></h3>
+							</header>
+							<p>When I'm outside</p>
+						</article>
+
+						<article>
 							<a href="#gallery-buildings" class="image featured"><img src="images/kvk.jpeg" alt="" /></a>
 							<header>
-								<h3><a href="#gallery-buildings">Buildings and Nature</a></h3>
+								<h3><a href="#gallery-buildings">Buildings</a></h3>
 							</header>
-							<p>Prishtina</p>
+							<p>Architecture</p>
 						</article>
 
 						<article>
-							<a href="#gallery-niagara" class="image featured"><img src="images/2.jpg" alt="" /></a>
+							<a href="#gallery-dogs" class="image featured"><img src="images/molli.jpeg" alt="" /></a>
 							<header>
-								<h4><a href="#gallery-niagara">Niagara Falls</a></h4>
+								<h3><a href="#gallery-dogs">Dogs</a></h3>
 							</header>
-							<p>US side of Nigara Falls, NY</p>
+							<p>Woof</p>
 						</article>
 
 						<article>
-							<a href="#" class="image featured"><img src="images/3.jpg" alt="" /></a>
+							<a href="#gallery-misc" class="image featured"><img src="images/kvk.jpeg" alt="" /></a>
 							<header>
-								<h3><a href="#">Chicago</a></h3>
+								<h3><a href="#gallery-misc">Misc</a></h3>
 							</header>
-							<p>Chicago view from Chicago360 Observatory, Chicago,Illinois</p>
-						</article>
-
-						<article>
-							<a href="#" class="image featured"><img src="images/4.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Chicago Park</a></h3>
-							</header>
-							<p></p>
-						</article>
-
-						<article>
-							<a href="#" class="image featured"><img src="images/5.jpeg" alt="" /></a>
-							<header>
-								<h3><a href="#">The Vessel</a></h3>
-							</header>
-							<p>The view of the Vessel a picture taken from below, Mannhattan,NYC</p>
-						</article>
-
-						<article>
-							<a href="#" class="image featured"><img src="images/19.jpeg" alt="" /></a>
-							<header>
-								<h3><a href="#">Cleveland</a></h3>
-							</header>
-							<p>Cleveland, OH</p>
-						</article>
-
-						<article>
-							<a href="#" class="image featured"><img src="images/7.jpeg" alt="" /></a>
-							<header>
-								<h3><a href="#">Tribute in Light</a></h3>
-							</header>
-							<p>September 11 memorial lights</p>
-						</article>
-
-						<article>
-							<a href="#" class="image featured"><img src="images/15.jpeg" alt="" /></a>
-							<header>
-								<h3><a href="#">Pittsburgh</a></h3>
-							</header>
-							<p>Observatory point - Mt.Washington</p>
-						</article>
-
-						<article>
-							<a href="#" class="image featured"><img src="images/17.jpeg" alt="" /></a>
-							<header>
-								<h3><a href="#">The view of Mannhattan Island</a></h3>
-							</header>
-							<p>Mannhattan, NYC</p>
-						</article>
-
-						<article>
-							<a href="#" class="image featured"><img src="images/13.jpeg" alt="" /></a>
-							<header>
-								<h3><a href="#">Chatham Bars Inn</a></h3>
-							</header>
-							<p>Chatham Cape Cod, MA</p>
+							<p>Something else</p>
 						</article>
 
 					</div>
@@ -183,8 +135,10 @@ html, body {
 
 <div class="wrapper style2">
 <article id="main" class="container special">
+<div class="gallery" id="gallery-nature"></div>
 <div class="gallery" id="gallery-buildings"></div>
-<div class="gallery" id="gallery-niagara"></div>
+<div class="gallery" id="gallery-dogs"></div>
+<div class="gallery" id="gallery-misc"></div>
 </article>
 </div>
 
@@ -232,22 +186,48 @@ html, body {
 
 <script src="https://cdn.jsdelivr.net/npm/nanogallery2@3.0.5/dist/jquery.nanogallery2.min.js" integrity="sha256-91VGpTg6V015EQ87D2XhztNiCU3UMYrFNCKJW6gfJ34=" crossorigin="anonymous"></script>
 <script type="text/javascript">
+$("#gallery-nature").nanogallery2({
+  thumbnailHeight:  150,
+  thumbnailWidth:   150,
+  items: [
+      { src: 'images/sunrise.jpg', title: '' },
+      { src: 'images/nature (1).jpg', title: '' },
+      { src: 'images/nature (2).jpg', title: '' },
+      { src: 'images/nature (3).jpg', title: '' }
+  ]
+});
 $("#gallery-buildings").nanogallery2({
   thumbnailHeight:  150,
   thumbnailWidth:   150,
   items: [
-      { src: 'images/1.jpg', title: 'Title Image 1' },
-      { src: 'images/2.jpg', title: 'Title Image 2' },
-      { src: 'images/3.jpg', title: 'Title Image 3' }
+      { src: 'images/1.jpg', title: '' },
+      { src: 'images/3.jpg', title: '' },
+      { src: 'images/4.jpg', title: '' },
+      { src: 'images/5.jpeg', title: '' },
+      { src: 'images/7.jpeg', title: '' },
+      { src: 'images/10.jpeg', title: '' },
+      { src: 'images/11.jpeg', title: '' },
+      { src: 'images/12.jpeg', title: '' },
+      { src: 'images/14.jpeg', title: '' },
+      { src: 'images/16.jpeg', title: '' },
+      { src: 'images/17.jpeg', title: '' },
+      { src: 'images/19.jpeg', title: '' },
+      { src: 'images/20.jpeg', title: '' }
   ]
 });
-$("#gallery-niagara").nanogallery2({
+$("#gallery-dogs").nanogallery2({
   thumbnailHeight:  150,
   thumbnailWidth:   150,
   items: [
-      { src: 'images/4.jpg', title: 'Title Image 1' },
-      { src: 'images/5.jpeg', title: 'Title Image 2' },
-      { src: 'images/6.jpeg', title: 'Title Image 3' }
+      { src: 'images/molli.jpeg', title: 'Molly' },
+      { src: 'images/molly.jpeg', title: 'Molly yawning' }
+  ]
+});
+$("#gallery-misc").nanogallery2({
+  thumbnailHeight:  150,
+  thumbnailWidth:   150,
+  items: [
+      { src: 'images/SOMETHINGHERE.jpeg', title: '' },
   ]
 });
 </script>
